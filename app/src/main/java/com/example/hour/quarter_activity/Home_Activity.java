@@ -10,5 +10,6 @@ public class Home_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_);
 //        dhasdjashdj
+        //史龙鑫
     }
 }
