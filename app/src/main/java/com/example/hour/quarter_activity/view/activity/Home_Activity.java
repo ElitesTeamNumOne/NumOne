@@ -13,16 +13,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Home_Activity extends AppCompatActivity {
-
     @BindView(R.id.bottom_tab_bar)
     BottomTabBar bottomTabBar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_);
         ButterKnife.bind(this);
-
         bottomTabBar.init(getSupportFragmentManager())
                 .addTabItem("推荐",R.mipmap.btn_tabbar_recommend_selected,R.mipmap.btn_tabbar_recommend_normal, RecommendedFragment.class)
                 .addTabItem("段子",R.mipmap.btn_tabbar_satin_selected,R.mipmap.btn_tabbar_satin_normal, JokesFragment.class)
