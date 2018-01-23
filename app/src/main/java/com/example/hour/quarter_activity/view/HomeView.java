@@ -5,4 +5,5 @@ package com.example.hour.quarter_activity.view;
  */
 
 public class HomeView {
+    ///123
 }
