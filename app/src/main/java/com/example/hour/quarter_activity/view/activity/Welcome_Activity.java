@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.example.hour.quarter_activity.R;
 public class Welcome_Activity extends AppCompatActivity {
     TextView tv;
@@ -36,7 +35,6 @@ public class Welcome_Activity extends AppCompatActivity {
             public void run() {
                 tv.setText(time+"");
                 time -- ;
-                Toast.makeText(Welcome_Activity.this, ""+time, Toast.LENGTH_SHORT).show();
                 if(time == 0){
                     Intent intent = new Intent(Welcome_Activity.this,Home_Activity.class);
                     startActivity(intent);
@@ -46,7 +44,7 @@ public class Welcome_Activity extends AppCompatActivity {
                     finish();
                     return;
                 }
-                handler.postDelayed(this, 2000);
+                handler.postDelayed(this, 1000);
             }
         }, 3000);
     }
