@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hour.quarter_activity.view.activity.Welcome_Activity">
-
-</android.support.constraint.ConstraintLayout>
+     <ImageView
+         android:id="@+id/imageView1"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@mipmap/fl" />
+     <TextView
+         android:id="@+id/tv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/imageView1"
+         android:layout_alignTop="@+id/imageView1"
+         android:layout_marginRight="18dp"
+         android:layout_marginTop="29dp"
+         android:textSize="20sp"/>
+</LinearLayout>
