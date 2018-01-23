@@ -1,5 +1,4 @@
 package com.example.hour.quarter_activity.view.activity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,10 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.hour.quarter_activity.R;
-
 public class Welcome_Activity extends AppCompatActivity {
     TextView tv;
     SharedPreferences preferences;
@@ -50,7 +46,7 @@ public class Welcome_Activity extends AppCompatActivity {
                 }
                 handler.postDelayed(this, 1000);
             }
-        }, 1000);
+        }, 3000);
     }
 
 }
