@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.hour.quarter_activity.view.activity.Home_Activity">
-    <com.hjm.bottomtabbar.BottomTabBar
-        android:id="@+id/bottom_tab_bar"
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorPrimary">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mSimp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@mipmap/ic_launcher"
+                fresco:roundAsCircle="true"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/mSlassifyname"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="sss" />
+            <ImageView
+                android:id="@+id/mWriteimage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/bj"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/draw"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:tab_unselected_color="#000000"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/mSide"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <com.hjm.bottomtabbar.BottomTabBar
+            android:id="@+id/bottom_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:tab_unselected_color="#000000" />
+    </android.support.v4.widget.DrawerLayout>
+
 </LinearLayout>
