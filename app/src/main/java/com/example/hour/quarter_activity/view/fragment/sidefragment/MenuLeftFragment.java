@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.sidefragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 import com.example.hour.quarter_activity.R;
 
 /**
- * Created by 小社会 on 2018/1/23,0023.
+ * Created by wangguojian on 2018/1/23.
  */
 
-public class RecommendedFragment extends Fragment{
+public class MenuLeftFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getActivity(), R.layout.recommended_layout,null);
-        return view;
+        return inflater.inflate(R.layout.menuleft_layout, container, false);
     }
 }
