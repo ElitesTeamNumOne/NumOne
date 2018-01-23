@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.hour.quarter_activity.R;
 public class Welcome_Activity extends AppCompatActivity {
     TextView tv;
