@@ -1,5 +1,6 @@
 package com.example.hour.quarter_activity.view.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -62,6 +63,12 @@ public class Home_Activity extends FragmentActivity {
                 idDrawerLayout.openDrawer(Gravity.LEFT);
                 idDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED,
                         Gravity.LEFT);
+            }
+        });
+        mWriteimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home_Activity.this,UpLoadActivity.class));
             }
         });
     }
