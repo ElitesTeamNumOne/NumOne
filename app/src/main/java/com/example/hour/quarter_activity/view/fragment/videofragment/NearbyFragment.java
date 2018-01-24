@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.videofragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,11 +13,11 @@ import com.example.hour.quarter_activity.R;
  * Created by 小社会 on 2018/1/24,0024.
  */
 
-public class HotFragment extends Fragment {
+public class NearbyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =View.inflate(getActivity(), R.layout.hot_fragment,null);
+        View view =View.inflate(getActivity(), R.layout.nearby_fragment,null);
         return view;
     }
 }
