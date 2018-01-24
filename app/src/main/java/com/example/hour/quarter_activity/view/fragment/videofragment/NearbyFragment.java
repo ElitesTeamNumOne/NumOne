@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.videofragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

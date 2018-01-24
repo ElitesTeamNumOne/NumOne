@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.view.fragment.JokesFragment;
 import com.example.hour.quarter_activity.view.fragment.RecommendedFragment;
-import com.example.hour.quarter_activity.view.fragment.VideoFragment;
+import com.example.hour.quarter_activity.view.fragment.videofragment.VideoFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.hjm.bottomtabbar.BottomTabBar;
 import com.nineoldandroids.view.ViewHelper;

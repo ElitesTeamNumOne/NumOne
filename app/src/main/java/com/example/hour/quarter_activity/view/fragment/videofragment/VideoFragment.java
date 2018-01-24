@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.videofragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.view.adapter.Find_tab_Adapter;
+import com.example.hour.quarter_activity.view.fragment.videofragment.HotFragment;
+import com.example.hour.quarter_activity.view.fragment.videofragment.NearbyFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +27,8 @@ public class VideoFragment extends Fragment {
     private Find_tab_Adapter find_tab_adapter;//适配器
     private List<String> listName;  //tab名称列表
     private List<Fragment> list_fragment;   //定义要装fragment的列表
-    private  HotFragment hotFragment;//热门
-    private  NearbyFragment nearbyFragment;//附近
+    private HotFragment hotFragment;//热门
+    private NearbyFragment nearbyFragment;//附近
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
