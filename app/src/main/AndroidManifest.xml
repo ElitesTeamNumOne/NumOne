@@ -4,7 +4,7 @@
     package="com.example.hour.quarter_activity">
 
     <application
-        android:name=".utils.App"
+        android:name=".utils.MyApp"
         tools:replace="android:label"
         android:allowBackup="true"
         android:icon="@mipmap/wanke"
@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.Home_Activity"></activity>
+        <activity android:name=".view.activity.UpLoadActivity"></activity>
     </application>
 
 </manifest>
