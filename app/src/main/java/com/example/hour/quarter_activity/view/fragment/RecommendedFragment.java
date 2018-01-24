@@ -32,13 +32,14 @@ public class RecommendedFragment extends Fragment{
     }
     private void initViews() {
 
-        //使用适配器将ViewPager与Fragment绑定在一起
+        //适配器将ViewPager与Fragment绑定在一起
         mViewPager = (ViewPager) view.findViewById(R.id.viewPager);
         recommendedAdapter = new RecommendedAdapter(getActivity().getSupportFragmentManager());
         mViewPager.setAdapter(recommendedAdapter);
 
         //将TabLayout与ViewPager绑定在一起
         mTabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        mTabLayout.setTabGravity(24);
         mTabLayout.setupWithViewPager(mViewPager);
 
         //指定Tab的位置
