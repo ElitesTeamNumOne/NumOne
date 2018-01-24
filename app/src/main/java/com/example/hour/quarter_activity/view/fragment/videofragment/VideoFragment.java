@@ -32,9 +32,10 @@ public class VideoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getActivity(), R.layout.video_layout,null);
 
+        View view = inflater.inflate(R.layout.video_layout, container, false);
         initControls(view);
+
 
         return view;
     }
@@ -53,7 +54,6 @@ public class VideoFragment extends Fragment {
         listName  = new ArrayList<>();
         listName.add("热门");
         listName.add("附近");
-
         //设置TabLayout的模式
         tab.setTabMode(TabLayout.MODE_FIXED);
         //为TabLayout添加tab名称
@@ -68,9 +68,8 @@ public class VideoFragment extends Fragment {
         //TabLayout加载viewpager
         tab.setupWithViewPager(vp_ac);
 
-
-
     }
-    }
+
+}
 
 

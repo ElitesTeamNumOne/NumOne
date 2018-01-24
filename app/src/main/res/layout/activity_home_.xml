@@ -27,12 +27,11 @@
 
             <TextView
                 android:id="@+id/mSlassifyname"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="60dp"
+                android:layout_height="31dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
-                android:text="sss" />
-
+                android:textSize="25dp"/>
             <ImageView
                 android:id="@+id/mWriteimage"
                 android:layout_width="45dp"
