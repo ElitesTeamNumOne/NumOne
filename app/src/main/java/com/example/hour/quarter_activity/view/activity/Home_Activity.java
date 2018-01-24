@@ -32,25 +32,28 @@ public class Home_Activity extends FragmentActivity {
     ImageView mWriteimage;
     @BindView(R.id.id_drawerLayout)
     DrawerLayout idDrawerLayout;
-
-
+    private String names;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home_);
         ButterKnife.bind(this);
-
+        //底部按钮
         bottomTabBar.init(getSupportFragmentManager())
                 .addTabItem("推荐", R.mipmap.btn_tabbar_recommend_selected, R.mipmap.btn_tabbar_recommend_normal, RecommendedFragment.class)
                 .addTabItem("段子", R.mipmap.btn_tabbar_satin_selected, R.mipmap.btn_tabbar_satin_normal, JokesFragment.class)
                 .addTabItem("视频", R.mipmap.btn_tabbar_video_selected, R.mipmap.btn_tabbar_video_normal, VideoFragment.class);
-//    mSimp.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View v) {
-//            draw.openDrawer(mSide);
-//        }
-//    });
+        bottomTabBar.setOnTabChangeListener(new BottomTabBar.OnTabChangeListener() {
+            @Override
+            public void onTabChange(int position, String name) {
+//                Toast.makeText(Home_Activity.this, ""+name, Toast.LENGTH_SHORT).show();
+                names = name;
+                mSlassifyname.setText(name);
+            }
+        });
+        mSlassifyname.setText("推荐");
+        //调用侧拉的两个方法
         initEvents();
         initView();
         mSimp.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +81,7 @@ public class Home_Activity extends FragmentActivity {
         }
 
     }
+    //侧栏栏
     private void initEvents()
     {
         idDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener()
@@ -138,6 +142,7 @@ public class Home_Activity extends FragmentActivity {
             }
         });
     }
+    //侧拉栏
     private void initView()
     {
         idDrawerLayout = (DrawerLayout) findViewById(R.id.id_drawerLayout);
