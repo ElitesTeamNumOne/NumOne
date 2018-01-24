@@ -29,7 +29,7 @@ import butterknife.Unbinder;
 public abstract class BaseOrdinaryActivity extends AppCompatActivity {
     protected FragmentManager mFragmentManager;
     protected Activity mContext;//上下文
-    private String mTitle;
+    private String mTitle;//12
     protected Fragment mFragment;
     private Unbinder mUnBinder;
 
