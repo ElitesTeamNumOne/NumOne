@@ -29,7 +29,7 @@ import butterknife.Unbinder;
 public abstract class BaseOrdinaryActivity extends AppCompatActivity {
     protected FragmentManager mFragmentManager;
     protected Activity mContext;//上下文
-    private String mTitle;//12
+    private String mTitle;
     protected Fragment mFragment;
     private Unbinder mUnBinder;
 
@@ -124,17 +124,6 @@ public abstract class BaseOrdinaryActivity extends AppCompatActivity {
         mFragment = fragment;
 
     }
-
-    /**
-     * 隐藏软键盘
-     *
-     * @param v
-     */
-//    public void hideInputMethod(final EditText v) {
-//        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-//        imm.hideSoftInputFromWindow(v.getWindowToken(),InputMethodManager.HIDE_IMPLICIT_ONLY);
-//
-//    }
 
     /**
      * 显示软键盘
