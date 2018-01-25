@@ -19,7 +19,7 @@ public class HotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =View.inflate(getActivity(), R.layout.hot_fragment,null);
         //张永博
-        //666666
+
         return view;
     }
 }
