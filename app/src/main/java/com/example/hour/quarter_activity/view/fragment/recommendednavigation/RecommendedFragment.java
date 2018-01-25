@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.recommendednavigation;
 
 import android.content.res.Resources;
 import android.os.Bundle;
