@@ -39,11 +39,11 @@ public class RecommendedFragment extends Fragment{
 
         //将TabLayout与ViewPager绑定在一起
         mTabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
-        mTabLayout.setTabGravity(24);
         mTabLayout.setupWithViewPager(mViewPager);
 
         //指定Tab的位置
         one = mTabLayout.getTabAt(0);
         two = mTabLayout.getTabAt(1);
     }
+
 }

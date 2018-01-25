@@ -12,6 +12,9 @@
         app:tabIndicatorHeight="5dp"
         app:tabMode="fixed"
         app:tabIndicatorColor="@color/right_menu_pressed"
+        app:tabPaddingStart="80dp"
+        app:tabPaddingEnd="80dp"
+
         app:tabSelectedTextColor="@color/right_menu_pressed"
       />
     <android.support.v4.view.ViewPager
