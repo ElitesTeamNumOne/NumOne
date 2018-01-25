@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.utils;
+package com.example.hour.quarter_activity.utils.http;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
