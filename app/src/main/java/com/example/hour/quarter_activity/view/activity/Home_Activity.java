@@ -48,7 +48,6 @@ public class Home_Activity extends FragmentActivity {
         bottomTabBar.setOnTabChangeListener(new BottomTabBar.OnTabChangeListener() {
             @Override
             public void onTabChange(int position, String name) {
-//                Toast.makeText(Home_Activity.this, ""+name, Toast.LENGTH_SHORT).show();
                 names = name;
                 mSlassifyname.setText(name);
             }
