@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.uploadfragment;
 
 import android.app.Activity;
 import android.content.Context;

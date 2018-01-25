@@ -4,6 +4,7 @@ import android.view.View;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.UpLoadEvent;
+import com.example.hour.quarter_activity.view.fragment.uploadfragment.BaseOrdinaryFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.BindView;
