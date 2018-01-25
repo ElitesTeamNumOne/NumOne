@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.presenter.UpLoadPresenter;
 import com.example.hour.quarter_activity.view.IView.UpLoadView;
+import com.example.hour.quarter_activity.view.fragment.uploadfragment.BaseFragment;
 
 /**
  * Created by HP on 2018/1/24.

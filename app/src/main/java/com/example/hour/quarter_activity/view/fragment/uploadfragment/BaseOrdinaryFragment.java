@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.fragment;
+package com.example.hour.quarter_activity.view.fragment.uploadfragment;
 
 /**
  * Created by HP on 2018/1/24.
@@ -22,7 +22,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-abstract class BaseOrdinaryFragment extends Fragment {
+public  abstract class BaseOrdinaryFragment extends Fragment {
 
     protected View mView;
     protected Activity mActivity;
