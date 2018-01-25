@@ -3,7 +3,7 @@ package com.example.hour.quarter_activity.presenter;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.example.hour.quarter_activity.utils.MyApp;
+import com.example.hour.quarter_activity.utils.MyApplication;
 import com.example.hour.quarter_activity.view.IView.BaseView;
 
 import java.util.Map;
@@ -33,7 +33,7 @@ public class BasePresenter<T extends BaseView> {
         if (mView!=null){
             return mView.context();
         }
-        return MyApp.getInstance();
+        return MyApplication.getInstance();
     }
 
     public void isEmpty(Map<String ,String> map){
