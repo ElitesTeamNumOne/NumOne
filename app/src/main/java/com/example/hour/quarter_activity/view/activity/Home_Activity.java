@@ -105,8 +105,7 @@ public class Home_Activity extends FragmentActivity {
                 float scale = 1 - slideOffset;
                 float rightScale = 0.8f + scale * 0.2f;
 
-                if (drawerView.getTag().equals("LEFT"))
-                {
+                if (drawerView.getTag().equals("LEFT")){
 
                     float leftScale = 1 - 0.3f * scale;
 
@@ -136,8 +135,8 @@ public class Home_Activity extends FragmentActivity {
             }
 
             @Override
-            public void onDrawerOpened(View drawerView)
-            {
+            public void onDrawerOpened(View drawerView){
+
             }
 
             @Override
