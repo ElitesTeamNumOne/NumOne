@@ -55,7 +55,7 @@ public class Home_Activity extends FragmentActivity {
         mSlassifyname.setText("推荐");
         //调用侧拉的两个方法
         initEvents();
-        initView();
+        //initView();
         mSimp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
