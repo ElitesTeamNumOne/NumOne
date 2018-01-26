@@ -1,6 +1,7 @@
 package com.example.hour.quarter_activity.model.Recommended;
 
 import com.example.hour.quarter_activity.model.bean.AdvertisingHot;
+import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.example.hour.quarter_activity.utils.Api;
 import com.example.hour.quarter_activity.utils.PortApi;
 import com.example.hour.quarter_activity.utils.http.HttpInterceptor;
@@ -37,6 +38,30 @@ public class HotModel {
 
                     @Override
                     public void onNext(AdvertisingHot hot) {
+                        iHotModel.onSucceed(hot);
+                    }
+                });
+    }
+    public void getDataTwo(final IHotModelTwo iHotModel){
+        OkHttpClient ok = new OkHttpClient.Builder().addInterceptor(new HttpInterceptor()).build();
+        RetrofitUnitl.getInstance(Api.HEAD,ok)
+                .setCreate(PortApi.class)
+                .getDataTwo("1","1")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<DataHot>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(DataHot hot) {
                         iHotModel.onSucceed(hot);
                     }
                 });

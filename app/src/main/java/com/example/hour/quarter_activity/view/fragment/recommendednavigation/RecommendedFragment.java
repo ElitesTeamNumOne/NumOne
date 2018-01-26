@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.hour.quarter_activity.R;
-import com.example.hour.quarter_activity.view.adapter.RecommendedAdapter;
+import com.example.hour.quarter_activity.view.adapter.recommended.RecommendedAdapter;
 
 import java.lang.reflect.Field;
 

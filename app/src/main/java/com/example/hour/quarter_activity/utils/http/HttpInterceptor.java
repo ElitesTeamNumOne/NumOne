@@ -4,6 +4,7 @@ import android.os.Build;
 
 import java.io.IOException;
 
+import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -20,6 +21,14 @@ public class HttpInterceptor implements Interceptor {
                 .newBuilder()
                 .addHeader(UA, makeUA())
                 .build();
+        if (request.method().equals("GET")) {
+            HttpUrl httpUrl = request.url()
+                    .newBuilder()
+                    .addQueryParameter("source","android")
+                    .addQueryParameter("appVersion", "1")
+                    .build();
+            request = request.newBuilder().url(httpUrl).build();
+        }
         return chain.proceed(request);
     }
 

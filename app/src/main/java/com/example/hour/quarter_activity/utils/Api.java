@@ -9,4 +9,7 @@ public class Api {
     public static  String HEAD = "https://www.zhaoapi.cn";
     //广告接口
     public static String advertising = "quarter/getAd";
+    //获取用户视频
+    public static String voide ="quarter/getVideos";
+    //https://www.zhaoapi.cn/quarter/getVideos?uid=11864&type=1&page=1&source=android&appVersion=1
 }

@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.adapter;
+package com.example.hour.quarter_activity.view.adapter.recommended;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
