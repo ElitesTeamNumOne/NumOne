@@ -71,7 +71,7 @@ public class Home_Activity extends FragmentActivity {
             }
         });
     }
-    //沉浸式ddddd
+    //沉浸式大佬
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
