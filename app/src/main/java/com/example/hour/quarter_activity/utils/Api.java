@@ -11,6 +11,5 @@ public class Api {
     public static String advertising = "quarter/getAd";
     //获取用户视频
     public static String voide ="quarter/getVideos";
-    //牛逼
     //https://www.zhaoapi.cn/quarter/getVideos?uid=11864&type=1&page=1&source=android&appVersion=1
 }
