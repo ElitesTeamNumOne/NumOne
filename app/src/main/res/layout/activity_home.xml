@@ -13,7 +13,7 @@
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
             android:background="@color/colorPrimary">
 
             <com.facebook.drawee.view.SimpleDraweeView
@@ -22,8 +22,14 @@
                 android:layout_height="45dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
-                android:background="@mipmap/ic_launcher"
-                fresco:roundAsCircle="true" />
+                fresco:backgroundImage="@mipmap/tx"
+                android:layout_marginLeft="16dp"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="100dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true" />
 
             <TextView
                 android:id="@+id/mSlassifyname"
@@ -31,14 +37,18 @@
                 android:layout_height="31dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
+                android:textColor="@color/light_white"
                 android:textSize="25dp"/>
             <ImageView
                 android:id="@+id/mWriteimage"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
                 android:layout_alignTop="@+id/mSimp"
-                android:background="@mipmap/bj" />
+                android:background="@mipmap/bj"
+                android:layout_marginTop="10dp"
+                />
 
         </RelativeLayout>
 
@@ -53,7 +63,7 @@
     <fragment
         android:id="@+id/id_left_menu"
         android:name="com.example.hour.quarter_activity.view.fragment.sidefragment.MenuLeftFragment"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:tag="LEFT" />

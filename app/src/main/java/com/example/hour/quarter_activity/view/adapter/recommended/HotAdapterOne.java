@@ -15,6 +15,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by wangguojian on 2018/1/25.
@@ -23,10 +24,13 @@ import butterknife.ButterKnife;
 public class HotAdapterOne extends RecyclerView.Adapter {
     private Context context;
     private List<DataHot.DataBean> list;
+
     public HotAdapterOne(Context context, List<DataHot.DataBean> list) {
         this.context = context;
         this.list = list;
+
     }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = View.inflate(context, R.layout.datahot_layout, null);
@@ -41,8 +45,13 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         holderOne.hotTime.setText(list.get(position).getCreateTime());
         holderOne.hotSpeak.setText(list.get(position).getWorkDesc());
         holderOne.hotSimp.setImageURI(list.get(position).getUser().getIcon());
-        holderOne.hotImage.setImageURI(list.get(position).getCover());
+
+        holderOne.videoplayer.setUp(list.get(position).getVideoUrl()
+                , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "今日推荐");
+
+//        TranslateAnimation animation = new TranslateAnimation()
     }
+
     @Override
     public int getItemCount() {
         if (list != null) {
@@ -50,6 +59,7 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         }
         return 0;
     }
+
     public class MyHolderOne extends RecyclerView.ViewHolder {
         @BindView(R.id.hot_simp)
         SimpleDraweeView hotSimp;
@@ -59,10 +69,6 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         TextView hotTime;
         @BindView(R.id.hot_speak)
         TextView hotSpeak;
-        @BindView(R.id.hot_image)
-        SimpleDraweeView hotImage;
-        @BindView(R.id.amOne_image)
-        ImageView amOneImage;
         @BindView(R.id.amTwo_image)
         ImageView amTwoImage;
         @BindView(R.id.amThree_image)
@@ -71,10 +77,12 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         ImageView amFourImage;
         @BindView(R.id.amFive_image)
         ImageView amFiveImage;
+        @BindView(R.id.videoplayer)
+        JZVideoPlayerStandard videoplayer;
+
         public MyHolderOne(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
     }
-
 }

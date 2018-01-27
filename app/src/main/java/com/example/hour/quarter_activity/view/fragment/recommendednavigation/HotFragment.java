@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,13 +57,12 @@ public class HotFragment extends Fragment implements IHotView{
                 .start();
     }
 
-    @Override
+       @Override
     public void onSucceedTwo(DataHot dataHot) {
         List<DataHot.DataBean> data = dataHot.getData();
         HotAdapterOne adapterOne = new HotAdapterOne(getActivity(),data);
         LinearLayoutManager lm  = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(lm);
         mRecyclerView.setAdapter(adapterOne);
-        Log.i("121321321312", "onSucceedTwo: "+dataHot.getData().get(0).getWorkDesc());
     }
 }

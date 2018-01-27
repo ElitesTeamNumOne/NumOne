@@ -36,12 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:text="测试测试测试"/>
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:layout_below="@id/hot_speak"
-        android:id="@+id/hot_image"
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/videoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-       />
+        android:layout_height="200dp"/>
     <ImageView
         android:id="@+id/amOne_image"
         android:layout_width="50dp"
@@ -76,5 +74,5 @@
         android:layout_height="50dp"
         android:background="@mipmap/ic_launcher"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"/>
 </RelativeLayout>

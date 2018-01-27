@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">一刻钟</string>
     <string name="press_again_to_exit">再按一次退出</string>
-    <string name="open"/>
-    <string name="close"/>
+    <string name="open" />
+    <string name="close" />
     <string name="groom">推荐</string>
     <string name="episode">段子</string>
     <string name="video">视频</string>
