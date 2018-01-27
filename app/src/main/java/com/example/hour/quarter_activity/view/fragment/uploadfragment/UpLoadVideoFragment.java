@@ -3,9 +3,8 @@ package com.example.hour.quarter_activity.view.fragment.uploadfragment;
 import android.content.Context;
 
 import com.example.hour.quarter_activity.R;
-import com.example.hour.quarter_activity.presenter.UpLoadPresenter;
-import com.example.hour.quarter_activity.view.IView.UpLoadView;
-import com.example.hour.quarter_activity.view.fragment.uploadfragment.BaseFragment;
+import com.example.hour.quarter_activity.presenter.uploadpresenter.UpLoadPresenter;
+import com.example.hour.quarter_activity.view.IView.uploadview.UpLoadView;
 
 /**
  * Created by HP on 2018/1/24.
