@@ -11,6 +11,7 @@ import com.example.hour.quarter_activity.view.IView.uploadview.UpLoadView;
  */
 
 public class UpLoadVideoFragment extends BaseFragment<UpLoadPresenter> implements UpLoadView {
+
     @Override
     public Context context() {
         return getActivity();
