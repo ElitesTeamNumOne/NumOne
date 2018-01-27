@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_drawerLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hour.quarter_activity.view.activity.Home_Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorPrimary">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mSimp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                fresco:backgroundImage="@mipmap/tx"
+                android:layout_marginLeft="16dp"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="100dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true" />
+
+            <TextView
+                android:id="@+id/mSlassifyname"
+                android:layout_width="60dp"
+                android:layout_height="31dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/light_white"
+                android:textSize="25dp"/>
+            <ImageView
+                android:id="@+id/mWriteimage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_alignTop="@+id/mSimp"
+                android:background="@mipmap/bj"
+                android:layout_marginTop="10dp"
+                />
+
+        </RelativeLayout>
+
+        <com.hjm.bottomtabbar.BottomTabBar
+            android:id="@+id/bottom_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:tab_unselected_color="#000000" />
+    </LinearLayout>
+    <fragment
+        android:id="@+id/id_left_menu"
+        android:name="com.example.hour.quarter_activity.view.fragment.sidefragment.MenuLeftFragment"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:tag="LEFT" />
+</android.support.v4.widget.DrawerLayout>

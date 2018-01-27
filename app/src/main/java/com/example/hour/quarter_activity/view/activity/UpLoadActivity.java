@@ -4,9 +4,9 @@ import android.view.KeyEvent;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.UpLoadEvent;
-import com.example.hour.quarter_activity.view.fragment.UpLoadFragment;
-import com.example.hour.quarter_activity.view.fragment.UpLoadVideoFragment;
-import com.example.hour.quarter_activity.view.fragment.UpLoadTextFragment;
+import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadFragment;
+import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadTextFragment;
+import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadVideoFragment;
 
 import org.greenrobot.eventbus.EventBus;
 

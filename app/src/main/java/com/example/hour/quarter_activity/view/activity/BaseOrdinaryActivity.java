@@ -126,17 +126,6 @@ public abstract class BaseOrdinaryActivity extends AppCompatActivity {
     }
 
     /**
-     * 隐藏软键盘
-     *
-     * @param v
-     */
-//    public void hideInputMethod(final EditText v) {
-//        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-//        imm.hideSoftInputFromWindow(v.getWindowToken(),InputMethodManager.HIDE_IMPLICIT_ONLY);
-//
-//    }
-
-    /**
      * 显示软键盘
      *
      * @param v

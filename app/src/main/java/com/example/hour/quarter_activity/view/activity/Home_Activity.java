@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.view.fragment.JokesFragment;
-import com.example.hour.quarter_activity.view.fragment.RecommendedFragment;
-import com.example.hour.quarter_activity.view.fragment.VideoFragment;
+import com.example.hour.quarter_activity.view.fragment.recommendednavigation.RecommendedFragment;
+import com.example.hour.quarter_activity.view.fragment.videofragment.VideoFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.hjm.bottomtabbar.BottomTabBar;
 import com.nineoldandroids.view.ViewHelper;
@@ -33,27 +33,30 @@ public class Home_Activity extends FragmentActivity {
     ImageView mWriteimage;
     @BindView(R.id.id_drawerLayout)
     DrawerLayout idDrawerLayout;
-
-
+    private String names;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_home_);
+        setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-
+        //底部按钮
         bottomTabBar.init(getSupportFragmentManager())
                 .addTabItem("推荐", R.mipmap.btn_tabbar_recommend_selected, R.mipmap.btn_tabbar_recommend_normal, RecommendedFragment.class)
                 .addTabItem("段子", R.mipmap.btn_tabbar_satin_selected, R.mipmap.btn_tabbar_satin_normal, JokesFragment.class)
                 .addTabItem("视频", R.mipmap.btn_tabbar_video_selected, R.mipmap.btn_tabbar_video_normal, VideoFragment.class);
-//    mSimp.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View v) {
-//            draw.openDrawer(mSide);
-//        }
-//    });
+        bottomTabBar.setOnTabChangeListener(new BottomTabBar.OnTabChangeListener() {
+            @Override
+            public void onTabChange(int position, String name) {
+                names = name;
+                mSlassifyname.setText(name);
+            }
+        });
+        mSlassifyname.setText("推荐");
+        //调用侧拉的两个方法
         initEvents();
-        initView();
+        //initView();
+        //辛佳奇
         mSimp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,6 +88,7 @@ public class Home_Activity extends FragmentActivity {
         }
 
     }
+    //侧栏栏
     private void initEvents()
     {
         idDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener()
@@ -102,8 +106,7 @@ public class Home_Activity extends FragmentActivity {
                 float scale = 1 - slideOffset;
                 float rightScale = 0.8f + scale * 0.2f;
 
-                if (drawerView.getTag().equals("LEFT"))
-                {
+                if (drawerView.getTag().equals("LEFT")){
 
                     float leftScale = 1 - 0.3f * scale;
 
@@ -133,8 +136,8 @@ public class Home_Activity extends FragmentActivity {
             }
 
             @Override
-            public void onDrawerOpened(View drawerView)
-            {
+            public void onDrawerOpened(View drawerView){
+
             }
 
             @Override
@@ -145,6 +148,7 @@ public class Home_Activity extends FragmentActivity {
             }
         });
     }
+    //侧拉栏
     private void initView()
     {
         idDrawerLayout = (DrawerLayout) findViewById(R.id.id_drawerLayout);
