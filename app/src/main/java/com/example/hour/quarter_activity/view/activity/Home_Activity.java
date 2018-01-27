@@ -38,7 +38,7 @@ public class Home_Activity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_home_);
+        setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         //底部按钮
         bottomTabBar.init(getSupportFragmentManager())
