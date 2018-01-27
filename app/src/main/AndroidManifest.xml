@@ -2,16 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hour.quarter_activity">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".utils.MyApplication"
-        tools:replace="android:label"
         android:allowBackup="true"
         android:icon="@mipmap/wanke"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
         <activity android:name=".view.activity.Welcome_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.Home_Activity"></activity>
-        <activity android:name=".view.activity.UpLoadActivity"></activity>
+        <activity android:name=".view.activity.Home_Activity" />
+        <activity android:name=".view.activity.UpLoadActivity" />
+        <activity android:name=".view.activity.sideactivity.Login_Activity" />
+        <activity android:name=".view.activity.sideactivity.Follow_Activity" />
+        <activity android:name=".view.activity.sideactivity.Collection_Activity" />
+        <activity android:name=".view.activity.sideactivity.Search_Activity" />
+        <activity android:name=".view.activity.sideactivity.Notice_Activity" />
+        <activity android:name=".view.activity.sideactivity.Works_Activity" />
+        <activity android:name=".view.activity.sideactivity.Setup_Activity"></activity>
     </application>
 
 </manifest>
