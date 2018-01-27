@@ -2,8 +2,8 @@ package com.example.hour.quarter_activity.presenter;
 
 import com.example.hour.quarter_activity.model.Jokes_IMoudel;
 import com.example.hour.quarter_activity.model.Jokes_Moudel;
-import com.example.hour.quarter_activity.view.Jokes.Jokes_Bean;
-import com.example.hour.quarter_activity.view.Jokes_IView;
+import com.example.hour.quarter_activity.model.bean.Jokes_Bean;
+import com.example.hour.quarter_activity.view.IView.Jokes.Jokes_IView;
 
 /**
  * Created by 王帅彪 on 2018/1/24.

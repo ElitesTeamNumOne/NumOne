@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_margin="15dp">
 
-        <com.example.hour.quarter_activity.view.Jokes.CircleImageView
+        <com.example.hour.quarter_activity.utils.CircleImageView
             android:id="@+id/jokes_icon"
             android:layout_width="50dp"
             android:layout_height="50dp"

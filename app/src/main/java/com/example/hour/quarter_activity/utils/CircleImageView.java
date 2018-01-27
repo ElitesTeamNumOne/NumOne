@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.Jokes;
+package com.example.hour.quarter_activity.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

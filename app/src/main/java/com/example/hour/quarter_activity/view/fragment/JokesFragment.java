@@ -23,11 +23,11 @@ import android.widget.Toast;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.presenter.Jokes_Presenter;
-import com.example.hour.quarter_activity.view.Jokes.Jokes_Adapter;
-import com.example.hour.quarter_activity.view.Jokes.Jokes_Bean;
-import com.example.hour.quarter_activity.view.Jokes.OnitemCliecklineasn;
-import com.example.hour.quarter_activity.view.Jokes.OnjiaCliecklineasn;
-import com.example.hour.quarter_activity.view.Jokes_IView;
+import com.example.hour.quarter_activity.view.adapter.Jokes_Adapter;
+import com.example.hour.quarter_activity.model.bean.Jokes_Bean;
+import com.example.hour.quarter_activity.view.IView.Jokes.OnitemCliecklineasn;
+import com.example.hour.quarter_activity.view.IView.Jokes.OnjiaCliecklineasn;
+import com.example.hour.quarter_activity.view.IView.Jokes.Jokes_IView;
 
 import java.util.List;
 
@@ -73,7 +73,8 @@ public class JokesFragment extends Fragment implements Jokes_IView{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getActivity(), R.layout.jokes_layout,null);
+        View view = inflater.inflate(R.layout.jokes_layout, container, false);
+//        View view = View.inflate(getActivity(), R.layout.jokes_layout,null);
 
         recyc = view.findViewById(R.id.jokes_recyc);
         swipe = view.findViewById(R.id.jokes_swipe);

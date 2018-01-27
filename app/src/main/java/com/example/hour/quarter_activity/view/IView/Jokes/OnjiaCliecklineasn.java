@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.Jokes;
+package com.example.hour.quarter_activity.view.IView.Jokes;
 
 import android.view.View;
 

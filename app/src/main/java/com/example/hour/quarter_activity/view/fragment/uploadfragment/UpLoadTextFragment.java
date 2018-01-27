@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
-import com.example.hour.quarter_activity.model.uploadmodel.UpLoadEvent;
+import com.example.hour.quarter_activity.model.UpLoadEvent;
 import com.example.hour.quarter_activity.presenter.uploadpresenter.UpLoadPresenter;
 import com.example.hour.quarter_activity.utils.LogUtils;
 import com.example.hour.quarter_activity.view.IView.uploadview.UpLoadView;

@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.Jokes;
+package com.example.hour.quarter_activity.view.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
+import com.example.hour.quarter_activity.model.bean.Jokes_Bean;
+import com.example.hour.quarter_activity.utils.CircleImageView;
+import com.example.hour.quarter_activity.view.IView.Jokes.OnitemCliecklineasn;
+import com.example.hour.quarter_activity.view.IView.Jokes.OnjiaCliecklineasn;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
