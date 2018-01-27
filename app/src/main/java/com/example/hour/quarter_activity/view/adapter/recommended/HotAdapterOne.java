@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -23,11 +24,11 @@ import cn.jzvd.JZVideoPlayerStandard;
 
 public class HotAdapterOne extends RecyclerView.Adapter {
     private Context context;
-    private List<DataHot.DataBean> list;
+    private List<DataHot.DataBean> list_data;
 
     public HotAdapterOne(Context context, List<DataHot.DataBean> list) {
         this.context = context;
-        this.list = list;
+        this.list_data = list;
 
     }
 
@@ -41,21 +42,24 @@ public class HotAdapterOne extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MyHolderOne holderOne = (MyHolderOne) holder;
-        holderOne.hotName.setText(list.get(position).getUser().getNickname());
-        holderOne.hotTime.setText(list.get(position).getCreateTime());
-        holderOne.hotSpeak.setText(list.get(position).getWorkDesc());
-        holderOne.hotSimp.setImageURI(list.get(position).getUser().getIcon());
+        holderOne.hotName.setText(list_data.get(position).getUser().getNickname());
+        holderOne.hotTime.setText(list_data.get(position).getCreateTime());
+        holderOne.hotSpeak.setText(list_data.get(position).getWorkDesc());
+        holderOne.hotSimp.setImageURI(list_data.get(position).getUser().getIcon());
 
-        holderOne.videoplayer.setUp(list.get(position).getVideoUrl()
+        holderOne.videoplayer.setUp(list_data.get(position).getVideoUrl()
                 , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "今日推荐");
-
+        Picasso.with(context)
+                .load(list_data.get(position).getCover())
+                .into(holderOne.videoplayer.thumbImageView);
+        holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
 //        TranslateAnimation animation = new TranslateAnimation()
     }
 
     @Override
     public int getItemCount() {
-        if (list != null) {
-            return list.size();
+        if (list_data != null) {
+            return list_data.size();
         }
         return 0;
     }

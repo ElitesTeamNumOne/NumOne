@@ -37,6 +37,7 @@
         android:layout_margin="6dp"
         android:text="测试测试测试"/>
     <cn.jzvd.JZVideoPlayerStandard
+        android:layout_below="@+id/hot_speak"
         android:id="@+id/videoplayer"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
