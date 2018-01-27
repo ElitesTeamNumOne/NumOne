@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="120dp"
+    android:layout_height="45dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:id="@+id/jokes_pop_pinglun"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jokes_xiaoxi"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/jokes_pop_fenxiang"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        <ImageView
+            android:padding="2dp"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jokes_fenxiang"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/jokes_pop_dinazan"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jokes_no"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/jokes_pop_dianzanshu"
+            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>
