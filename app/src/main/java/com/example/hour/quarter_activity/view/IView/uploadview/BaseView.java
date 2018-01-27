@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.view.IView;
+package com.example.hour.quarter_activity.view.IView.uploadview;
 
 import android.content.Context;
 
@@ -7,7 +7,6 @@ import android.content.Context;
  */
 
 public interface BaseView {
-
     Context context();
 
     void onSucceed(Object object);

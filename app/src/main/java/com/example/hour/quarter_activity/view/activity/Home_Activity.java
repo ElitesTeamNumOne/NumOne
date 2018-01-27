@@ -55,7 +55,7 @@ public class Home_Activity extends FragmentActivity {
         mSlassifyname.setText("推荐");
         //调用侧拉的两个方法
         initEvents();
-        initView();
+        //initView();
         //辛佳奇
         mSimp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +72,7 @@ public class Home_Activity extends FragmentActivity {
             }
         });
     }
-    //沉浸式大佬
+    //沉浸式
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
