@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hour.quarter_activity.presenter.BasePresenter;
-import com.example.hour.quarter_activity.view.IView.BaseView;
+import com.example.hour.quarter_activity.presenter.uploadpresenter.BasePresenter;
+import com.example.hour.quarter_activity.view.IView.uploadview.BaseView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
