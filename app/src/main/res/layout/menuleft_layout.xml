@@ -11,44 +11,47 @@
         android:layout_height="200dp"
         android:background="@mipmap/b3e"
         >
+
         <RelativeLayout
             android:id="@+id/cce_ttp"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            >
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/ce_mSimp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
-                fresco:backgroundImage="@mipmap/tx"
                 android:layout_marginLeft="16dp"
+                fresco:backgroundImage="@mipmap/tx"
                 fresco:roundAsCircle="true"
-                fresco:roundedCornerRadius="100dp"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
                 fresco:roundTopLeft="true"
                 fresco:roundTopRight="true"
-                fresco:roundBottomLeft="true"
-                fresco:roundBottomRight="true" />
+                fresco:roundedCornerRadius="100dp" />
+
             <TextView
+                android:id="@+id/cce_szcy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="四组成员"
-                android:textSize="16sp"
-                android:layout_toRightOf="@+id/ce_mSimp"
-                android:layout_marginLeft="25dp"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/ce_mSimp"
+                android:text="登录"
                 android:textColor="@color/light_white"
-                />
+                android:textSize="16sp" />
+
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:src="@mipmap/b3k"
-                android:layout_marginRight="16dp"
                 android:layout_alignParentRight="true"
-                />
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/b3k" />
         </RelativeLayout>
         <TextView
             android:layout_width="match_parent"

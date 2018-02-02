@@ -38,12 +38,14 @@
         android:layout_marginBottom="30dp"
         >
         <ImageView
+            android:id="@+id/login_wx"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/ae7"
             android:layout_marginLeft="50dp"
             />
         <ImageView
+            android:id="@+id/login_qq"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/ae2"
@@ -58,6 +60,7 @@
         android:layout_alignParentBottom="true"
         android:text="其他登录方式"
         android:textColor="@color/light_white"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
         />
 </RelativeLayout>

@@ -4,6 +4,8 @@
     package="com.example.hour.quarter_activity">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- QQ登录授权所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:configChanges="orientation|screenSize|keyboardHidden"
@@ -21,17 +23,37 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.Home_Activity" />
         <activity android:name=".view.activity.UpLoadActivity" />
         <activity android:name=".view.activity.sideactivity.Login_Activity" />
+        <activity android:name=".view.activity.sideactivity.logactivity.Log_Activity"/>
+        <activity android:name=".view.activity.sideactivity.logactivity.Register_Activity"/>
         <activity android:name=".view.activity.sideactivity.Follow_Activity" />
         <activity android:name=".view.activity.sideactivity.Collection_Activity" />
         <activity android:name=".view.activity.sideactivity.Search_Activity" />
         <activity android:name=".view.activity.sideactivity.Notice_Activity" />
         <activity android:name=".view.activity.sideactivity.Works_Activity" />
         <activity android:name=".view.activity.sideactivity.Setup_Activity"></activity>
+
+        <!-- 注册SDKActivity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="1105602574" /> <!-- 开放平台获取的APPID -->
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
