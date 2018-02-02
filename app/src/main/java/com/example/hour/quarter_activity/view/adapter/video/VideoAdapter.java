@@ -8,7 +8,6 @@ import android.widget.ImageView;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.bean.DataHot;
-import com.example.hour.quarter_activity.view.adapter.recommended.HotAdapterOne;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -48,8 +47,7 @@ public class VideoAdapter extends RecyclerView.Adapter {
         Picasso.with(context)
                 .load(list_data.get(position).getCover())
                 .into(holderOne.videoplayer.thumbImageView);
-        holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-//        TranslateAnimation animation = new TranslateAnimation()
+      holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 
     @Override
