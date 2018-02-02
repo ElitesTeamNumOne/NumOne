@@ -4,11 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.hour.quarter_activity.view.activity.sideactivity.Login_Activity">
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="搜索好友"
-        android:gravity="center"
-        />
+        android:layout_height="56dp"
+        android:background="@color/dodgerblue"
+        >
+        <ImageView
+            android:id="@+id/search_fh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/fanhui"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:layout_toRightOf="@+id/search_fh"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/light_white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜索好友"
+            android:textSize="16dp"
+            android:textColor="@color/light_white"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background"
+        >
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="输入ID或者钟友名"
+            android:background="@drawable/abc"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp"
+            />
+    </RelativeLayout>
+
 </LinearLayout>

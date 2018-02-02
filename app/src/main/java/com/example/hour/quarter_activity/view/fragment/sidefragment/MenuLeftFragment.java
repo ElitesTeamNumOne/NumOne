@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -48,6 +49,8 @@ public class MenuLeftFragment extends Fragment {
     RelativeLayout cceHy;
     @BindView(R.id.cce_tz)
     RelativeLayout cceTz;
+    @BindView(R.id.cce_szcy)
+    TextView cceSzcy;
 
     @Nullable
     @Override
@@ -57,6 +60,8 @@ public class MenuLeftFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
         //侧滑点击事件
         initSide();
+        Intent intent = getActivity().getIntent();
+        cceSzcy.setText( intent.getStringExtra("mz"));
         return view;
     }
 
@@ -105,14 +110,14 @@ public class MenuLeftFragment extends Fragment {
         mTogBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // TODO Auto-generated method stub
-                if(isChecked){
+                if (isChecked) {
                     //选中
-                    Toast.makeText(getActivity(),"开",Toast.LENGTH_SHORT).show();
-                }else{
+                    Toast.makeText(getActivity(), "开", Toast.LENGTH_SHORT).show();
+                } else {
                     //未选中
-                    Toast.makeText(getActivity(),"关",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "关", Toast.LENGTH_SHORT).show();
                 }
             }
         });
