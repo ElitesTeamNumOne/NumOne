@@ -5,6 +5,5 @@ package com.example.hour.quarter_activity.view.IView.VoidView;
  */
 
 public interface Viodview {
-
     void Finde(Exception e);
 }

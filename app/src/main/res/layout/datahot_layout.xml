@@ -40,40 +40,97 @@
         android:layout_below="@+id/hot_speak"
         android:id="@+id/videoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="260dp"/>
+    <LinearLayout
+        android:layout_below="@+id/hot_speak"
+        android:layout_width="45dp"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:id="@+id/mImagePraise"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:background="@mipmap/praise_successful"/>
+        <TextView
+            android:id="@+id/mTextPraise"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="1065"/>
+        <ImageView
+            android:id="@+id/mImageCollection"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:background="@mipmap/collection_successful"/>
+        <TextView
+            android:id="@+id/mTextCollection"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="1065"/>
+        <ImageView
+            android:id="@+id/mImageShare"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:background="@mipmap/share_suc"/>
+        <TextView
+            android:id="@+id/mTextShare"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="1065"/>
+        <ImageView
+            android:id="@+id/mImageComments"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:background="@mipmap/comments"/>
+        <TextView
+            android:id="@+id/mTextComments"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="1.1万"/>
+    </LinearLayout>
     <ImageView
         android:id="@+id/amOne_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@mipmap/ic_launcher"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
     <ImageView
         android:id="@+id/amTwo_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@mipmap/ic_launcher"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
     <ImageView
         android:id="@+id/amThree_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@mipmap/ic_launcher"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
     <ImageView
         android:id="@+id/amFour_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@mipmap/ic_launcher"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
     <ImageView
         android:id="@+id/amFive_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@mipmap/ic_launcher"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:background="@drawable/jokes_jia"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+       />
 </RelativeLayout>

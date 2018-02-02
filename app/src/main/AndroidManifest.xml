@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:label">
+        tools:replace="android:name">
         <activity android:name=".view.activity.Welcome_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
