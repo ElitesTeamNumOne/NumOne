@@ -48,7 +48,7 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         //找控件
         ButterKnife.bind(this);
-        //隐藏头
+        //隐藏头.
         getSupportActionBar().hide();
         //传入参数APPID和全局Context上下文
         mTencent = Tencent.createInstance(APP_ID,Login_Activity.this.getApplicationContext());
