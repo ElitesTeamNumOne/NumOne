@@ -1,4 +1,4 @@
-package com.example.hour.quarter_activity.model;
+package com.example.hour.quarter_activity.model.uploadmodel;
 
 /**
  * Created by HP on 2018/1/24.

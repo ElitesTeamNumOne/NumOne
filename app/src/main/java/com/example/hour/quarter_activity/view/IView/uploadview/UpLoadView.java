@@ -7,4 +7,6 @@ import com.example.hour.quarter_activity.view.IView.uploadview.BaseView;
  */
 
 public interface UpLoadView extends BaseView {
+
+
 }

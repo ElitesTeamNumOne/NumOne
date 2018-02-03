@@ -12,12 +12,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hour.quarter_activity.R;
-import com.example.hour.quarter_activity.model.UpLoadEvent;
+import com.example.hour.quarter_activity.model.uploadmodel.UpLoadEvent;
 import com.example.hour.quarter_activity.presenter.uploadpresenter.UpLoadPresenter;
 import com.example.hour.quarter_activity.utils.LogUtils;
 import com.example.hour.quarter_activity.view.IView.uploadview.UpLoadView;
+import com.example.hour.quarter_activity.view.activity.Home_Activity;
+import com.example.hour.quarter_activity.view.activity.uploadactivity.ReleaseActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -81,12 +84,38 @@ public class UpLoadTextFragment extends BaseFragment<UpLoadPresenter> implements
             case R.id.up_cancel:
                 mUpEt.setText("");
                 mUpIv.setImageResource(R.mipmap.plus);
-                sendEvent(new UpLoadEvent(3));
+//                sendEvent(new UpLoadEvent(3));
+                final String[] items = { "保存","不保存","取消" };
+                android.app.AlertDialog.Builder listDialog =
+                        new android.app.AlertDialog.Builder(getActivity());
+//                listDialog.setTitle(list.get(position).getSongname());
+                listDialog.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case 0:
+                                Toast.makeText(getActivity(),"保存",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getActivity(), Home_Activity.class));
+                                break;
+                            case 1:
+                                Toast.makeText(getActivity(),"不保存",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getActivity(), Home_Activity.class));
+                                break;
+                            case 2:
+                                Toast.makeText(getActivity(),"取消",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getActivity(), Home_Activity.class));
+                                break;
+                        }
+                    }
+                });
+                listDialog.show();
                 break;
             case R.id.up_publish:
                 // TODO: 2017/8/1   发表
                 String iconToString = convertIconToString(mBimap);
                 mPresenter.upLoadIv(iconToString);
+                startActivity(new Intent(getActivity(), ReleaseActivity.class));
+                //https://www.zhaoapi.cn/quarter/publishJoke?&source=android&appVersion=101&uid=3799&token=784C2D3A409A67893CF531E26E4FAB90&content=44864654165
                 break;
             case R.id.up_iv:
                 //相机 照片选择

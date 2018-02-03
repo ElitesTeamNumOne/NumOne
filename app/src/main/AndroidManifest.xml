@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.Home_Activity" />
-        <activity android:name=".view.activity.UpLoadActivity" />
+        <activity android:name=".view.activity.uploadactivity.UpLoadActivity" />
         <activity android:name=".view.activity.sideactivity.Login_Activity" />
         <activity android:name=".view.activity.sideactivity.logactivity.Log_Activity"/>
         <activity android:name=".view.activity.sideactivity.logactivity.Register_Activity"/>
@@ -37,6 +37,7 @@
         <activity android:name=".view.activity.sideactivity.Search_Activity" />
         <activity android:name=".view.activity.sideactivity.Notice_Activity" />
         <activity android:name=".view.activity.sideactivity.Works_Activity" />
+        <activity android:name=".view.activity.uploadactivity.ReleaseActivity"></activity>
         <activity android:name=".view.activity.sideactivity.Setup_Activity"></activity>
 
         <!-- 注册SDKActivity -->

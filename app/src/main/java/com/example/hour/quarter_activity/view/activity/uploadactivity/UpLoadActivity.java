@@ -1,9 +1,10 @@
-package com.example.hour.quarter_activity.view.activity;
+package com.example.hour.quarter_activity.view.activity.uploadactivity;
 
 import android.view.KeyEvent;
 
 import com.example.hour.quarter_activity.R;
-import com.example.hour.quarter_activity.model.UpLoadEvent;
+import com.example.hour.quarter_activity.model.uploadmodel.UpLoadEvent;
+import com.example.hour.quarter_activity.view.activity.BaseOrdinaryActivity;
 import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadFragment;
 import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadTextFragment;
 import com.example.hour.quarter_activity.view.fragment.uploadfragment.UpLoadVideoFragment;
@@ -14,7 +15,7 @@ import org.greenrobot.eventbus.EventBus;
  * Created by HP on 2018/1/24.
  */
 
-public class UpLoadActivity extends BaseOrdinaryActivity{
+public class UpLoadActivity extends BaseOrdinaryActivity {
 
     private UpLoadFragment mUpLoadFragment;
     private UpLoadVideoFragment mUpLoadVideoFragment;
