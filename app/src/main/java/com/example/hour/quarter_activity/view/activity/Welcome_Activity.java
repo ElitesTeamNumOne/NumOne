@@ -19,7 +19,7 @@ public class Welcome_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //无标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_welcome_);
+        setContentView(R.layout.activity_welcome);
         tv = (TextView) findViewById(R.id.tv);
         preferences = getSharedPreferences("cof", MODE_PRIVATE);
         editor = preferences.edit();
