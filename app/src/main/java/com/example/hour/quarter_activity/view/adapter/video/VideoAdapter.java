@@ -20,7 +20,7 @@ import cn.jzvd.JZVideoPlayerStandard;
  * Created by BoBrother on 2018/1/27.
  */
 
-public class VideoAdapter extends RecyclerView.Adapter {
+public class VideoAdapter extends RecyclerView.Adapter implements View.OnClickListener {
     private Context context;
     private List<DataHot.DataBean> list_data;
 
@@ -34,6 +34,7 @@ public class VideoAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = View.inflate(context, R.layout.vdio_hotlayout, null);
         MyHolderOne holderOne = new MyHolderOne(view);
+        view.setOnClickListener(this);
         return holderOne;
     }
 
@@ -42,12 +43,13 @@ public class VideoAdapter extends RecyclerView.Adapter {
         VideoAdapter.MyHolderOne holderOne = (VideoAdapter.MyHolderOne) holder;
 
 
-        holderOne.videoplayer.setUp(list_data.get(position).getVideoUrl()
-                , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "今日推荐");
+       /* holderOne.videoplayer.setUp(list_data.get(position).getVideoUrl()
+                , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "今日推荐");*/
         Picasso.with(context)
                 .load(list_data.get(position).getCover())
                 .into(holderOne.videoplayer.thumbImageView);
-      holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+          holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        holderOne.itemView.setTag(position);
     }
 
     @Override
@@ -56,6 +58,17 @@ public class VideoAdapter extends RecyclerView.Adapter {
             return list_data.size();
         }
         return 0;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (mOnItemClickListener != null) {
+            //注意这里使用getTag方法获取position
+            mOnItemClickListener.onItemClick(view,(int)view.getTag());
+        }
+    }
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mOnItemClickListener = listener;
     }
 
     public class MyHolderOne extends RecyclerView.ViewHolder {
@@ -67,6 +80,9 @@ public class VideoAdapter extends RecyclerView.Adapter {
             ButterKnife.bind(this, itemView);
         }
     }
-
+    private OnItemClickListener mOnItemClickListener = null;
+    public static interface OnItemClickListener {
+        void onItemClick(View view , int position);
+    }
 
 }
