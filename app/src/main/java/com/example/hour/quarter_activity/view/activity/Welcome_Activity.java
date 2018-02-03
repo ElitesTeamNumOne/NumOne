@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.TextView;
 import com.example.hour.quarter_activity.R;
 public class Welcome_Activity extends AppCompatActivity {
+    //王国建
     TextView tv;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
