@@ -12,7 +12,7 @@ public class Welcome_Activity extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     Handler handler = new Handler();
-    // 设置跳转时长事件
+    // 设置跳转时长事件123
     int time = 3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
