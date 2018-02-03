@@ -30,20 +30,17 @@ public class HotAdapterOne extends RecyclerView.Adapter {
     private Context context;
     private List<DataHot.DataBean> list_data;
     private int num = 2;
-
     public HotAdapterOne(Context context, List<DataHot.DataBean> list) {
         this.context = context;
         this.list_data = list;
 
     }
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = View.inflate(context, R.layout.datahot_layout, null);
         MyHolderOne holderOne = new MyHolderOne(view);
         return holderOne;
     }
-
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final MyHolderOne holderOne = (MyHolderOne) holder;
@@ -88,7 +85,6 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         OnekeyShare oks = new OnekeyShare();
         //关闭sso授权
         oks.disableSSOWhenAuthorize();
-
         // title标题，微信、QQ和QQ空间等平台使用
         oks.setTitle(context.getString(R.string.share));
         // titleUrl QQ和QQ空间跳转链接

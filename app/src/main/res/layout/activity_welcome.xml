@@ -19,5 +19,6 @@
          android:layout_alignTop="@+id/imageView1"
          android:layout_marginRight="18dp"
          android:layout_marginTop="29dp"
-         android:textSize="20sp"/>
+         android:textSize="20sp"
+         android:text="123"/>
 </LinearLayout>
