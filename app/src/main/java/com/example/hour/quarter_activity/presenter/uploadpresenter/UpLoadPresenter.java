@@ -10,6 +10,5 @@ import com.example.hour.quarter_activity.view.IView.uploadview.UpLoadView;
 
 public class UpLoadPresenter extends BasePresenter<UpLoadView> {
     public void upLoadIv(String iconToString) {
-        //56156
     }
 }

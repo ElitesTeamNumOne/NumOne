@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
+import com.example.hour.quarter_activity.view.activity.uploadactivity.UpLoadActivity;
 import com.example.hour.quarter_activity.view.fragment.JokesFragment;
 import com.example.hour.quarter_activity.view.fragment.recommendednavigation.RecommendedFragment;
 import com.example.hour.quarter_activity.view.fragment.videofragment.VideoFragment;
