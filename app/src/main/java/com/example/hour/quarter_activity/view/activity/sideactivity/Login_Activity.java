@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hour.quarter_activity.R;
+import com.example.hour.quarter_activity.view.activity.Home_Activity;
 import com.example.hour.quarter_activity.view.activity.sideactivity.logactivity.Log_Activity;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.tencent.connect.UserInfo;
@@ -86,7 +87,8 @@ public class Login_Activity extends AppCompatActivity {
         @Override
         public void onComplete(Object response) {
             Toast.makeText(Login_Activity.this, "授权成功", Toast.LENGTH_SHORT).show();
-            Log.e(TAG, "response:" + response);
+            Intent intent = new Intent(Login_Activity.this, Home_Activity.class);
+            startActivity(intent);
             JSONObject obj = (JSONObject) response;
             try {
                 String openID = obj.getString("openid");
@@ -94,9 +96,11 @@ public class Login_Activity extends AppCompatActivity {
                 String expires = obj.getString("expires_in");
                 mTencent.setOpenId(openID);
                 mTencent.setAccessToken(accessToken,expires);
+
                 QQToken qqToken = mTencent.getQQToken();
                 mUserInfo = new UserInfo(getApplicationContext(),qqToken);
                 mUserInfo.getUserInfo(new IUiListener() {
+
                     @Override
                     public void onComplete(Object response) {
                         Log.e(TAG,"登录成功"+response.toString());
@@ -106,7 +110,6 @@ public class Login_Activity extends AppCompatActivity {
                     public void onError(UiError uiError) {
                         Log.e(TAG,"登录失败"+uiError.toString());
                     }
-
                     @Override
                     public void onCancel() {
                         Log.e(TAG,"登录取消");

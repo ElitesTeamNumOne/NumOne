@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.view.activity.Home_Activity;
+import com.example.hour.quarter_activity.view.fragment.sidefragment.EventBean;
+
+import org.greenrobot.eventbus.Subscribe;
 
 public class Setup_Activity extends AppCompatActivity {
 
@@ -23,8 +26,9 @@ public class Setup_Activity extends AppCompatActivity {
         setup_tc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Setup_Activity.this, Home_Activity.class);
+                Intent intent = new Intent(Setup_Activity.this, Login_Activity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -2,6 +2,7 @@ package com.example.hour.quarter_activity.presenter.sidepresenter;
 
 import com.example.hour.quarter_activity.model.sidebean.LogBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
+import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.model.sidemodel.ILogmodel;
 import com.example.hour.quarter_activity.view.IView.sideview.ILogView;
 
@@ -29,6 +30,11 @@ public class LogPresenter implements ILogmodel.LoginModel{
         view.onRegScuss(bean);
     }
 
+    @Override
+    public void search(SearchBean bean) {
+        view.onRandScuss(bean);
+    }
+
 
     //定义登录的方法
     public void LogPer(String name, String pass){
@@ -37,5 +43,9 @@ public class LogPresenter implements ILogmodel.LoginModel{
     //定义注册的方法
     public void RegPer(String name,String pass){
         model.RegModel(name,pass);
+    }
+    //定义搜索的方法
+    public void RandPer(String keywords){
+        model.RandModel(keywords);
     }
 }

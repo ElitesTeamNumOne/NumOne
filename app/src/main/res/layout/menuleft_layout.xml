@@ -26,7 +26,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="16dp"
-                fresco:backgroundImage="@mipmap/tx"
+                fresco:backgroundImage="@mipmap/xy"
                 fresco:roundAsCircle="true"
                 fresco:roundBottomLeft="true"
                 fresco:roundBottomRight="true"
@@ -41,7 +41,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@+id/ce_mSimp"
-                android:text="登录"
+                android:text="用户名"
                 android:textColor="@color/light_white"
                 android:textSize="16sp" />
 
