@@ -15,7 +15,7 @@ import org.greenrobot.eventbus.EventBus;
  * Created by HP on 2018/1/24.
  */
 
-public class UpLoadActivity extends BaseOrdinaryActivity {
+public class Up_Activity extends BaseOrdinaryActivity {
 
     private UpLoadFragment mUpLoadFragment;
     private UpLoadVideoFragment mUpLoadVideoFragment;

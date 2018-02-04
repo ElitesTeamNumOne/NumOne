@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.sidebean.LogBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
+import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.presenter.sidepresenter.LogPresenter;
 import com.example.hour.quarter_activity.view.IView.sideview.ILogView;
 import com.example.hour.quarter_activity.view.activity.Home_Activity;
@@ -100,5 +101,10 @@ public class Register_Activity extends AppCompatActivity implements ILogView{
         }else{
             Toast.makeText(this,"注册失败",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onRandScuss(SearchBean bean) {
+
     }
 }

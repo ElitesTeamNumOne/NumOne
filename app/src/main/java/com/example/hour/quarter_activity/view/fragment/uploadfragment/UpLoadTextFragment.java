@@ -112,8 +112,8 @@ public class UpLoadTextFragment extends BaseFragment<UpLoadPresenter> implements
                 break;
             case R.id.up_publish:
                 // TODO: 2017/8/1   发表
-                String iconToString = convertIconToString(mBimap);
-                mPresenter.upLoadIv(iconToString);
+//                String iconToString = convertIconToString(mBimap);
+//                mPresenter.upLoadIv(iconToString);
                 startActivity(new Intent(getActivity(), ReleaseActivity.class));
                 //https://www.zhaoapi.cn/quarter/publishJoke?&source=android&appVersion=101&uid=3799&token=784C2D3A409A67893CF531E26E4FAB90&content=44864654165
                 break;

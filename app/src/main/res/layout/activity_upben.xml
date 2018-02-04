@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.hour.quarter_activity.view.activity.uploadactivity.UpbenActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#0f6bdc"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/btn_fanhui"
+            android:background="@mipmap/fan"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:text="预览"
+            android:gravity="center"
+            android:textColor="#fffefe"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/btn_ben"
+            android:text="保存到本地"
+            android:textColor="#fffefe"
+            android:layout_width="70dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#787676"
+        >
+    </View>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        fresco:roundedCornerRadius="10dp"
+        fresco:roundAsCircle="true"
+        android:id="@+id/fresco"
+        fresco:placeholderImage="@mipmap/ic_launcher"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#10d0e6"
+        android:layout_height="60dp">
+        <TextView
+            android:text="滤镜"
+            android:textColor="#093b78"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#A2DEFA"
+        android:layout_height="250dp">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:background="@mipmap/rouguang"
+            android:layout_height="100dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_xia"
+        android:layout_width="match_parent"
+        android:background="#29B6F6"
+        android:text="下一步"
+        android:textSize="20dp"
+        android:textColor="#fffefe"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

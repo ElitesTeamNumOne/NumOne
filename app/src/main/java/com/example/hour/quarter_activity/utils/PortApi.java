@@ -4,6 +4,7 @@ import com.example.hour.quarter_activity.model.bean.AdvertisingHot;
 import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.example.hour.quarter_activity.model.bean.Jokes_Bean;
 import com.example.hour.quarter_activity.model.sidebean.LogBean;
+import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
 
 import retrofit2.http.GET;
@@ -40,4 +41,15 @@ public interface PortApi {
      */
     @GET("/user/login?source=android&appVersion=101")
     Observable<LogBean> getLogin(@Query("mobile") String mobile,@Query("password") String password);
+    /**
+     * 随机钟友
+     * https://www.zhaoapi.cn/quarter/randomFriends?source=android&appVersion=101
+     */
+
+    /**
+     * 搜索钟友
+     * https://www.zhaoapi.cn/quarter/searchFriends?keywords=1&page=1&source=android&appVersion=101
+     */
+    @GET("/quarter/searchFriends?keywords=1&page=1&source=android&appVersion=101")
+    Observable<SearchBean> getSearch(@Query("keywords") String keywords,@Query("page") String page);
 }

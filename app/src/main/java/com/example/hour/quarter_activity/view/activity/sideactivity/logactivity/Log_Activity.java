@@ -13,10 +13,15 @@ import android.widget.Toast;
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.sidebean.LogBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
+import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.presenter.sidepresenter.LogPresenter;
 import com.example.hour.quarter_activity.utils.eventbusbao.EvenLogBean;
 import com.example.hour.quarter_activity.view.IView.sideview.ILogView;
 import com.example.hour.quarter_activity.view.activity.Home_Activity;
+import com.example.hour.quarter_activity.view.activity.sideactivity.Login_Activity;
+import com.example.hour.quarter_activity.view.fragment.sidefragment.EventBean;
+
+import org.greenrobot.eventbus.EventBus;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -100,7 +105,6 @@ public class Log_Activity extends AppCompatActivity implements ILogView {
 
     @Override
     public void onLogScuss(LogBean bean) {
-        EventBus.getDefault().postSticky(new EvenLogBean(bean));
         if (bean.getCode().equals("0")){
             Intent intent = new Intent(Log_Activity.this,Home_Activity.class);
             intent.putExtra("mz",bean.getData().getUsername());
