@@ -1,5 +1,6 @@
 package com.example.hour.quarter_activity.view.activity.uploadactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
+import com.example.hour.quarter_activity.view.activity.sideactivity.Works_Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -109,7 +111,7 @@ public class ReleaseActivity extends AppCompatActivity {
                 showShare();
                 break;
             case R.id.tv_qianqu:
-                showShare();
+                startActivity(new Intent(ReleaseActivity.this,Works_Activity.class));
                 break;
         }
     }
