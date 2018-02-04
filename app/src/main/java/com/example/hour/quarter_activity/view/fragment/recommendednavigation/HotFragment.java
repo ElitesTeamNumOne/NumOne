@@ -56,7 +56,6 @@ public class HotFragment extends Fragment implements IHotView{
                 .setImages(uri)
                 .start();
     }
-
        @Override
     public void onSucceedTwo(DataHot dataHot) {
         List<DataHot.DataBean> data = dataHot.getData();

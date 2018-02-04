@@ -29,7 +29,7 @@ public class VideoFragment extends Fragment {
     private Find_tab_Adapter find_tab_adapter;//适配器
     private List<String> listName;  //tab名称列表
     private List<Fragment> list_fragment;   //定义要装fragment的列表
-    private HotFragment hotFragment;//热门
+    private DetailsFragment detailsFragment;//热门
     private NearbyFragment nearbyFragment;//附近
     @Nullable
     @Override
@@ -46,10 +46,10 @@ public class VideoFragment extends Fragment {
         tab = view.findViewById(R.id.tab);
         vp_ac = view.findViewById(R.id.vp_ac);
 
-        hotFragment = new HotFragment();
+        detailsFragment = new DetailsFragment();
         nearbyFragment = new NearbyFragment();
         list_fragment = new ArrayList<>();
-        list_fragment.add(hotFragment);
+        list_fragment.add(detailsFragment);
         list_fragment.add(nearbyFragment);
 
         listName  = new ArrayList<>();

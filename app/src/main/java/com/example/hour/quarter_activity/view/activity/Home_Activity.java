@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
+import com.example.hour.quarter_activity.view.activity.uploadactivity.Up_Activity;
 import com.example.hour.quarter_activity.view.fragment.JokesFragment;
 import com.example.hour.quarter_activity.view.fragment.recommendednavigation.RecommendedFragment;
 import com.example.hour.quarter_activity.view.fragment.videofragment.VideoFragment;
@@ -68,7 +69,7 @@ public class Home_Activity extends FragmentActivity {
         mWriteimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home_Activity.this,UpLoadActivity.class));
+                startActivity(new Intent(Home_Activity.this,Up_Activity.class));
             }
         });
     }

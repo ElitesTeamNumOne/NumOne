@@ -3,15 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.youth.banner.Banner
-        android:id="@+id/mHotBanner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-    </com.youth.banner.Banner>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/mHotRecyler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.youth.banner.Banner
+                android:id="@+id/mHotBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </com.youth.banner.Banner>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mHotRecyler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
