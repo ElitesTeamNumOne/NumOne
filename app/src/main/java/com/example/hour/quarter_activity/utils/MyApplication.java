@@ -1,6 +1,7 @@
 package com.example.hour.quarter_activity.utils;
 
 import android.app.Application;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.mob.MobSDK;
@@ -16,8 +17,11 @@ public class MyApplication extends Application{
         super.onCreate();
         Fresco.initialize(this);
        MobSDK.init(this);
+
     }
     public static synchronized MyApplication getInstance() {
         return instance;
     }
+
+
 }
