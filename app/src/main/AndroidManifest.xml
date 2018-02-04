@@ -60,7 +60,8 @@
             android:name=".view.activity.HotsActivity"
             android:label="@string/title_activity_hots"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.activity.uploadactivity.UpbenActivity"></activity>
+        <activity android:name=".view.activity.uploadactivity.UpbenActivity" />
+        <activity android:name=".view.activity.uploadactivity.FelessActivity"></activity>
     </application>
 
 </manifest>

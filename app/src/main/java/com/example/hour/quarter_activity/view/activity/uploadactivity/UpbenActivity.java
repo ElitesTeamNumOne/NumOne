@@ -59,7 +59,7 @@ public class UpbenActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_xia:
-                startActivity(new Intent(UpbenActivity.this,ReleaseActivity.class));
+                startActivity(new Intent(UpbenActivity.this,FelessActivity.class));
                 break;
         }
     }
