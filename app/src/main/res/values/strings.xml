@@ -7,6 +7,8 @@
     <string name="groom">推荐</string>
     <string name="episode">段子</string>
     <string name="video">视频</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
     <!-- 我的 -->
     <string name="btn_click_login">点击登录</string>

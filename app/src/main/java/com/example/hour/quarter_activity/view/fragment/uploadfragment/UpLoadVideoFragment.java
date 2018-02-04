@@ -1,6 +1,8 @@
 package com.example.hour.quarter_activity.view.fragment.uploadfragment;
 
 import android.content.Context;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.presenter.uploadpresenter.UpLoadPresenter;
@@ -39,6 +41,7 @@ public class UpLoadVideoFragment extends BaseFragment<UpLoadPresenter> implement
 
     @Override
     protected void initData() {
+//        startActivity(new Intent(getActivity(),ceshi_Activity.class));
 
     }
 }
