@@ -39,4 +39,5 @@
     <string name="publishArticle">发表文章</string>
     <string name="publish">发表</string>
     <string name="at">"@Ta"</string>
+    <string name="title_activity_hots">HotsActivity</string>
 </resources>

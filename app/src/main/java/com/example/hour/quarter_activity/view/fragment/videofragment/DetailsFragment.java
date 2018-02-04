@@ -1,5 +1,6 @@
 package com.example.hour.quarter_activity.view.fragment.videofragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.example.hour.quarter_activity.presenter.Recommended.HotPresenter;
 import com.example.hour.quarter_activity.view.IView.Recommended.IHotView;
 import com.example.hour.quarter_activity.view.IView.VoidView.SpacesItemDecoration;
+import com.example.hour.quarter_activity.view.activity.HotsActivity;
 import com.example.hour.quarter_activity.view.adapter.recommended.HotAdapterOne;
 import com.example.hour.quarter_activity.view.adapter.video.VideoAdapter;
 
@@ -25,7 +27,6 @@ import java.util.List;
  */
 
 public class DetailsFragment extends Fragment implements IHotView {
-    private List<DataHot.DataBean> list=new ArrayList<>();
     private RecyclerView recyclerview;
     HotPresenter presenter;
     VideoAdapter adapterOne;
@@ -55,15 +56,9 @@ public class DetailsFragment extends Fragment implements IHotView {
         adapterOne = new VideoAdapter(getActivity(),data);
         recyclerview.setAdapter(adapterOne);
         //设置item之间的间隔
-            SpacesItemDecoration decoration=new SpacesItemDecoration(16);
+        SpacesItemDecoration decoration=new SpacesItemDecoration(16);
         recyclerview.addItemDecoration(decoration);
-        adapterOne.setOnItemClickListener(new VideoAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                //Intent intent = new Intent(getActivity(),HotsFragmnet.class);
-               // startActivity(intent);
-            }
-        });
+
 
     }
 }
