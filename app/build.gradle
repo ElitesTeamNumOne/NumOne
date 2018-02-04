@@ -77,6 +77,5 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.4.0'
     compile 'cn.jzvd:jiaozivideoplayer:6.2.7'
     implementation files('libs/open_sdk_r5990_lite.jar')
-
     compile 'com.facebook.fresco:animated-gif:1.5.0'
 }
