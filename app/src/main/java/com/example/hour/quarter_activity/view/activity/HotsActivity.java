@@ -21,6 +21,7 @@ import com.example.hour.quarter_activity.presenter.Recommended.HotPresenter;
 import com.example.hour.quarter_activity.view.IView.Recommended.IHotView;
 import com.example.hour.quarter_activity.view.adapter.video.VideoAdapter;
 import com.example.hour.quarter_activity.view.adapter.video.VideoDetailsAdapter;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
@@ -33,6 +34,7 @@ import cn.jzvd.JZVideoPlayerStandard;
 
 public class HotsActivity extends AppCompatActivity   {
     JZVideoPlayerStandard dt_videoA;
+    SimpleDraweeView sv_HA;
     TextView tv_video;
     String next;
     int parseInt;
@@ -42,6 +44,7 @@ public class HotsActivity extends AppCompatActivity   {
         setContentView(R.layout.activity_hots);
         dt_videoA = findViewById(R.id.dt_videoA);
         tv_video  = findViewById(R.id.tv_video);
+        sv_HA = findViewById(R.id.sv_HA);
         EventBus.getDefault().register(HotsActivity.this);
         next = getIntent().getStringExtra("next");
         parseInt = Integer.parseInt(next);
@@ -52,7 +55,8 @@ public class HotsActivity extends AppCompatActivity   {
     public void EventBus(List<DataHot.DataBean> dataHot)
     {
         dt_videoA.setUp(dataHot.get(parseInt).getVideoUrl(),JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL);
-        tv_video.setText(dataHot.get(parseInt).getWorkDesc());
+        //tv_video.setText(dataHot.get(parseInt).getWorkDesc());
+        sv_HA.setImageURI(dataHot.get(parseInt).getCover());
 
     }
 

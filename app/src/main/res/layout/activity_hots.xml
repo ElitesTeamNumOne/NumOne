@@ -10,17 +10,31 @@
     <cn.jzvd.JZVideoPlayerStandard
         android:id="@+id/dt_videoA"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="240dp"
         android:layout_marginTop="15dp"
         />
   <TextView
       android:id="@+id/tv_video"
       android:layout_marginTop="20dp"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
-  <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="@mipmap/video"
+      android:layout_height="wrap_content"
+      android:text="女子翻窗户被挂在窗户,路人围观"
+      android:textColor="@color/black"
+      android:layout_marginLeft="15dp"
       />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15963次播放 今天19:16"
+            android:layout_marginLeft="15dp"/>
+    />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginTop="15dp"
+        android:id="@+id/sv_HA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@mipmap/video"
+        />
 </LinearLayout>
