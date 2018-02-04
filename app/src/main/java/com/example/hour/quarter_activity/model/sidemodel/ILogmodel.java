@@ -1,7 +1,10 @@
 package com.example.hour.quarter_activity.model.sidemodel;
 
+import android.util.Log;
+
 import com.example.hour.quarter_activity.model.sidebean.LogBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
+import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.utils.Api;
 import com.example.hour.quarter_activity.utils.PortApi;
 import com.example.hour.quarter_activity.utils.http.RetrofitUnitl;
@@ -77,9 +80,34 @@ public class ILogmodel {
                 });
 
     }
+    //定义一个方法
+    public void RandModel(final String keywords){
+        //OkHttp里面可以添加拦截器
+        OkHttpClient ok = new OkHttpClient.Builder()
+                .build();
+        //请求数据
+        RetrofitUnitl.getInstance(Api.HEAD,ok)
+                .setCreate(PortApi.class)
+                .getSearch(keywords,"1")
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Subscriber<SearchBean>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+                    @Override
+                    public void onNext(SearchBean bean) {
+                        model.search(bean);
+                    }
+                });
+    }
     //定义一个接口类
     public interface LoginModel {
         void  login(LogBean bean);
         void reg(RegBean bean);
+        void search(SearchBean bean);
     }
 }

@@ -22,15 +22,6 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="返回"
-          android:textSize="20sp"
-          android:layout_toRightOf="@+id/coll_fh"
-          android:layout_centerVertical="true"
-          android:textColor="@color/light_white"
-          />
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
           android:layout_centerInParent="true"
           android:text="我的收藏"
           android:textSize="16dp"

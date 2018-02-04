@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ import com.example.hour.quarter_activity.view.activity.sideactivity.Notice_Activ
 import com.example.hour.quarter_activity.view.activity.sideactivity.Search_Activity;
 import com.example.hour.quarter_activity.view.activity.sideactivity.Setup_Activity;
 import com.example.hour.quarter_activity.view.activity.sideactivity.Works_Activity;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,18 +55,26 @@ public class MenuLeftFragment extends Fragment {
     RelativeLayout cceTz;
     @BindView(R.id.cce_szcy)
     TextView cceSzcy;
+    @BindView(R.id.ce_czt)
+    ImageView ceCzt;
+    Unbinder unbinder1;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.menuleft_layout, container, false);
-        //找控件
-        unbinder = ButterKnife.bind(this, view);
+        unbinder1 = ButterKnife.bind(this, view);
         //侧滑点击事件
         initSide();
-        Intent intent = getActivity().getIntent();
-        cceSzcy.setText( intent.getStringExtra("mz"));
+        //注册
+        EventBus.getDefault().register(this);
         return view;
+    }
+
+    @Subscribe(sticky = true)
+    public void event(EventBean eventBean) {
+        //接受传过来的文字
+        cceSzcy.setText(eventBean.getTitle());
     }
 
     private void initSide() {
@@ -127,6 +139,7 @@ public class MenuLeftFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Works_Activity.class);
                 startActivity(intent);
+
             }
         });
         //设置
@@ -143,5 +156,7 @@ public class MenuLeftFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        EventBus.getDefault().unregister(this);//取消注册
     }
+
 }
