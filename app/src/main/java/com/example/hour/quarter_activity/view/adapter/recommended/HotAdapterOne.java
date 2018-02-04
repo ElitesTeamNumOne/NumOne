@@ -1,6 +1,7 @@
 package com.example.hour.quarter_activity.view.adapter.recommended;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.bean.DataHot;
+import com.example.hour.quarter_activity.view.activity.recommend.HotDetailsActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.squareup.picasso.Picasso;
 
@@ -54,6 +56,13 @@ public class HotAdapterOne extends RecyclerView.Adapter {
                 .load(list_data.get(position).getCover())
                 .into(holderOne.videoplayer.thumbImageView);
         holderOne.videoplayer.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        holderOne.hotSimp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, HotDetailsActivity.class);
+                context.startActivity(intent);
+            }
+        });
         holderOne.mImageShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -214,5 +223,4 @@ public class HotAdapterOne extends RecyclerView.Adapter {
         //播放动画
         Four.startAnimation(ta3);
     }
-
 }

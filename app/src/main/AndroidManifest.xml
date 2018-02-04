@@ -59,7 +59,8 @@
         <activity
             android:name=".view.activity.HotsActivity"
             android:label="@string/title_activity_hots"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.activity.recommend.HotDetailsActivity"></activity>
     </application>
 
 </manifest>
