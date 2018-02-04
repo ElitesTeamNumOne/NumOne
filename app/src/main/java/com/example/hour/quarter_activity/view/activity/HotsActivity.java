@@ -55,7 +55,7 @@ public class HotsActivity extends AppCompatActivity   {
     public void EventBus(List<DataHot.DataBean> dataHot)
     {
         dt_videoA.setUp(dataHot.get(parseInt).getVideoUrl(),JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL);
-        //tv_video.setText(dataHot.get(parseInt).getWorkDesc());
+        //tv_video.setText(dataHot.get(parseInt).getWorkDesc());...
         sv_HA.setImageURI(dataHot.get(parseInt).getCover());
 
     }
