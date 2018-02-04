@@ -7,6 +7,54 @@
     android:layout_height="match_parent"
     tools:context="com.example.hour.quarter_activity.view.activity.HotsActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dodgerblue"
+        >
+        <ImageView
+            android:id="@+id/coll_ht"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/fanhui"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/abf"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="7dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ae2"
+            android:layout_marginLeft="70dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/abh"
+            />
+        <TextView
+            android:id="@+id/follow_ht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="删除"
+            android:textSize="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/light_white"
+            />
+    </RelativeLayout>
+
+
+
+
     <cn.jzvd.JZVideoPlayerStandard
         android:id="@+id/dt_videoA"
         android:layout_width="match_parent"
@@ -32,8 +80,8 @@
     <com.facebook.drawee.view.SimpleDraweeView
         android:layout_marginTop="15dp"
         android:id="@+id/sv_HA"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         android:layout_gravity="center"
         android:background="@mipmap/video"
         />
