@@ -30,7 +30,7 @@ public abstract class BaseOrdinaryActivity extends AppCompatActivity {
     protected FragmentManager mFragmentManager;
     protected Activity mContext;//上下文
     private String mTitle;//123
-    protected Fragment mFragment;
+    protected Fragment mFragment;//123
     private Unbinder mUnBinder;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
