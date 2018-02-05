@@ -38,6 +38,7 @@
         <activity android:name=".view.activity.sideactivity.Works_Activity" />
         <activity android:name=".view.activity.uploadactivity.ReleaseActivity" />
         <activity android:name=".view.activity.sideactivity.Setup_Activity" />
+        <activity android:name=".view.activity.uploadactivity.FelessActivity"></activity>
 
         <!-- 注册SDKActivity -->
         <activity
