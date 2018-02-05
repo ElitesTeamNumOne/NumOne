@@ -4,18 +4,11 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-import android.view.animation.TranslateAnimation;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.hour.quarter_activity.R;
 import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.facebook.drawee.view.SimpleDraweeView;
-
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
