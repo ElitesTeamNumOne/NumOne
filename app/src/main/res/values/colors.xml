@@ -29,7 +29,7 @@
 
     <!-- 内容条目按下时的样式 -->
     <color name="pressed_bg">#f2f2f2</color>
-    <color name="nopressed_bg">#fff</color>
+    <color name="nopressed_bg">#ffffff</color>
 
     <!-- 助手内容颜色 -->
     <color name="title_content_color">#484848</color>

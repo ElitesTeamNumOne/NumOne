@@ -38,7 +38,9 @@ public class NewxFragment extends Fragment {
         View view = inflater.inflate(R.layout.newx_layout, container, false);
         unbinder = ButterKnife.bind(this, view);
 
-                // 图片地址http://img.huofar.com/data/jiankangrenwu/shizi.gif
+                // 图片地址 http://a.hiphotos.baidu.com/image/pic/item/c2fdfc039245d6888c65ecb9afc27d1ed21b2443.gif
+              // https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517744747638&di=544d65beb783bda735bccaa53494230c&imgtype=0&src=http%3A%2F%2Fimg.mp.sohu.com%2Fupload%2F20170801%2Fe7394cc152be4148bd00ef2943972ae6.png
+
                 Uri uri = Uri.parse("http://a.hiphotos.baidu.com/image/pic/item/c2fdfc039245d6888c65ecb9afc27d1ed21b2443.gif");
                 DraweeController controller = Fresco.newDraweeControllerBuilder()
                         .setUri(uri)
