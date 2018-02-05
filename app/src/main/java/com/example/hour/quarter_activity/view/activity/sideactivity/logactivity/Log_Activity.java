@@ -15,15 +15,8 @@ import com.example.hour.quarter_activity.model.sidebean.LogBean;
 import com.example.hour.quarter_activity.model.sidebean.RegBean;
 import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.presenter.sidepresenter.LogPresenter;
-import com.example.hour.quarter_activity.utils.eventbusbao.EvenLogBean;
 import com.example.hour.quarter_activity.view.IView.sideview.ILogView;
 import com.example.hour.quarter_activity.view.activity.Home_Activity;
-import com.example.hour.quarter_activity.view.activity.sideactivity.Login_Activity;
-import com.example.hour.quarter_activity.view.fragment.sidefragment.EventBean;
-
-import org.greenrobot.eventbus.EventBus;
-
-import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -116,6 +109,11 @@ public class Log_Activity extends AppCompatActivity implements ILogView {
 
     @Override
     public void onRegScuss(RegBean bean) {
+
+    }
+
+    @Override
+    public void onRandScuss(SearchBean bean) {
 
     }
 }

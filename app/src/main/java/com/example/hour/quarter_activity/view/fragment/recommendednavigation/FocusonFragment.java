@@ -19,7 +19,7 @@ import java.util.List;
  * Created by wangguojian on 2018/1/24.
  */
 
-public class FocusonFragment extends Fragment {
+public class FocusonFragment extends Fragment{
     private  View view;
     private HotPresenter presenter;
     private Banner mBanners;
@@ -32,5 +32,8 @@ public class FocusonFragment extends Fragment {
 
         return view;
     }
+
+
+
 
 }

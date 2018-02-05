@@ -61,6 +61,7 @@ public class HotAdapterOne extends RecyclerView.Adapter {
             public void onClick(View view) {
                 Intent intent = new Intent(context, HotDetailsActivity.class);
                 context.startActivity(intent);
+                //tiao
             }
         });
         holderOne.mImageShare.setOnClickListener(new View.OnClickListener() {

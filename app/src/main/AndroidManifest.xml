@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.Home_Activity" />
+       <activity android:name=".view.activity.recommend.HotDetailsActivity"/>
         <activity android:name=".view.activity.uploadactivity.Up_Activity" />
         <activity android:name=".view.activity.sideactivity.Login_Activity" />
         <activity android:name=".view.activity.sideactivity.logactivity.Log_Activity" />
