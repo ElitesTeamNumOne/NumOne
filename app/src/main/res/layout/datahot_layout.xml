@@ -52,7 +52,7 @@
             android:id="@+id/mImagePraise"
             android:layout_width="45dp"
             android:layout_height="44dp"
-            android:background="@mipmap/praise_successful"/>
+            android:background="@mipmap/xin"/>
         <TextView
             android:id="@+id/mTextPraise"
             android:layout_width="45dp"
@@ -63,7 +63,7 @@
             android:id="@+id/mImageCollection"
             android:layout_width="45dp"
             android:layout_height="44dp"
-            android:background="@mipmap/collection_successful"/>
+            android:background="@mipmap/shouc"/>
         <TextView
             android:id="@+id/mTextCollection"
             android:layout_width="45dp"
@@ -74,7 +74,7 @@
             android:id="@+id/mImageShare"
             android:layout_width="45dp"
             android:layout_height="44dp"
-            android:background="@mipmap/share_suc"/>
+            android:background="@mipmap/fenx"/>
         <TextView
             android:id="@+id/mTextShare"
             android:layout_width="45dp"
@@ -85,7 +85,7 @@
             android:id="@+id/mImageComments"
             android:layout_width="45dp"
             android:layout_height="44dp"
-            android:background="@mipmap/comments"/>
+            android:background="@mipmap/pingl"/>
         <TextView
             android:id="@+id/mTextComments"
             android:layout_width="45dp"

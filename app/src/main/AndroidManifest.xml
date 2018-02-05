@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.Home_Activity" />
+       <activity android:name=".view.activity.recommend.HotDetailsActivity"/>
         <activity android:name=".view.activity.uploadactivity.Up_Activity" />
         <activity android:name=".view.activity.sideactivity.Login_Activity" />
         <activity android:name=".view.activity.sideactivity.logactivity.Log_Activity" />
@@ -60,8 +61,7 @@
             android:name=".view.activity.HotsActivity"
             android:label="@string/title_activity_hots"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.activity.uploadactivity.UpbenActivity" />
-        <activity android:name=".view.activity.uploadactivity.FelessActivity"></activity>
+        <activity android:name=".view.activity.uploadactivity.UpbenActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,13 @@ import com.example.hour.quarter_activity.model.bean.AdvertisingHot;
 import com.example.hour.quarter_activity.model.bean.DataHot;
 import com.example.hour.quarter_activity.presenter.Recommended.HotPresenter;
 import com.example.hour.quarter_activity.utils.ImageGlide;
+import com.example.hour.quarter_activity.utils.eventbusbao.EvenLogBean;
 import com.example.hour.quarter_activity.view.IView.Recommended.IHotView;
 import com.example.hour.quarter_activity.view.adapter.recommended.HotAdapterOne;
 import com.youth.banner.Banner;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +41,7 @@ public class HotFragment extends Fragment implements IHotView{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.hot_layout, container, false);
+        EventBus.getDefault().register(this);
         presenter = new HotPresenter(this);
         presenter.getDataOne();
         presenter.getDataTwo();
@@ -63,5 +69,15 @@ public class HotFragment extends Fragment implements IHotView{
         LinearLayoutManager lm  = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(lm);
         mRecyclerView.setAdapter(adapterOne);
+    }
+    @Subscribe(sticky = true)
+    public void EvenLog(EvenLogBean bean){
+        String token = bean.getBean().getData().getToken();
+        Log.i("1111111111111ss", "EvenLog: "+token);
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }

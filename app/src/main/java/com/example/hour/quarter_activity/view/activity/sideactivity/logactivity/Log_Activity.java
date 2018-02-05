@@ -17,10 +17,6 @@ import com.example.hour.quarter_activity.model.sidebean.SearchBean;
 import com.example.hour.quarter_activity.presenter.sidepresenter.LogPresenter;
 import com.example.hour.quarter_activity.view.IView.sideview.ILogView;
 import com.example.hour.quarter_activity.view.activity.Home_Activity;
-import com.example.hour.quarter_activity.view.activity.sideactivity.Login_Activity;
-import com.example.hour.quarter_activity.view.fragment.sidefragment.EventBean;
-
-import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,7 +45,6 @@ public class Log_Activity extends AppCompatActivity implements ILogView {
         //隐藏头
         getSupportActionBar().hide();
         presenter = new LogPresenter(this);
-
         //跳转到登录后主界面
         log_dl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,9 +99,9 @@ public class Log_Activity extends AppCompatActivity implements ILogView {
     @Override
     public void onLogScuss(LogBean bean) {
         if (bean.getCode().equals("0")){
-            //EventBus的粘性事件跳转
-            EventBus.getDefault().postSticky(new EventBean(bean.getData().getUsername()));
-            startActivity(new Intent(Log_Activity.this, Home_Activity.class));
+            Intent intent = new Intent(Log_Activity.this,Home_Activity.class);
+            intent.putExtra("mz",bean.getData().getUsername());
+            startActivity(intent);
         }else{
             Toast.makeText(this,"登录失败",Toast.LENGTH_SHORT).show();
         }
@@ -121,5 +116,4 @@ public class Log_Activity extends AppCompatActivity implements ILogView {
     public void onRandScuss(SearchBean bean) {
 
     }
-
 }
